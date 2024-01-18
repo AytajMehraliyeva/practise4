@@ -1,0 +1,30 @@
+.detailCard {
+    display: flex;
+    margin: 210px auto;
+    width: 60%;
+    height: auto;
+    border: 1px solid black;
+    overflow: hidden;
+    border-radius: 10px;
+    gap: 20px;
+    img {
+        width: 48%;
+        height: 440px;
+    }
+    &Body {
+        width: 48%;
+        text-align: center;
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        gap: 30px;
+        justify-content: center;
+        flex-direction: column;
+        h2 {
+            font-size: 40px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}

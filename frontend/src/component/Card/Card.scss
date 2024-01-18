@@ -1,0 +1,48 @@
+.card {
+    width: 22%;
+    height: 380px;
+    border: 1px solid black;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 190px;
+    }
+    &Body {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 20px;
+        p {
+            padding-top: 10px;
+        }
+        .detailBtn {
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: rgb(240, 160, 0);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        .detailBtn:hover {
+            background-color: rgb(224, 119, 0);
+        }
+        .heart {
+            color: rgb(190, 190, 190);
+            cursor: pointer;
+            font-size: 30px;
+            width: 90px;
+            margin: auto;
+            border: 1px solid rgba(0, 0, 0, 0);
+            transition: 0.3s;
+        }
+        .heart:hover {
+            font-size: 36px;
+            color: rgb(237, 0, 0);
+        }
+    }
+}

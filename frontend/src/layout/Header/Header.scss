@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    width: 1339px;
+    height: 104px;
+    position: fixed;
+    z-index: 1;
+    padding: 0 0 0 25px;
+    top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    left: 100px;
+    justify-content: space-between;
+    .logo {
+        display: flex;
+        gap: 5px;
+        align-items: baseline;
+        padding: 20px 10px;
+        width: 20%;
+        h4 {
+            font-size: 30px;
+            color: rgb(20, 20, 58);
+            height: 20px;
+        }
+        img {
+            width: 55px;
+            height: 43px;
+            padding-top: 15px;
+        }
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        width: 40%;
+        font-size: 20px;
+        text-align: center;
+        li {
+            margin: auto;
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .phone {
+        width: 33%;
+        background-color: rgb(255, 187, 0);
+        height: 100%;
+        align-items: baseline;
+        padding: 0 10px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        color: white;
+        justify-content: center;
+        .icon {
+            color: white;
+        }
+    }
+}
