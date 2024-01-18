@@ -11,7 +11,7 @@ function App() {
   const[search,setSearch]=useState('')
   const [error, setError] = useState('')
   const [wishListItems, setWishlistItems] = useState(localStorage.getItem("wishlistItems") ? JSON.parse(localStorage.getItem("wishlistItems")) : [])
-  
+  const [sortType, setSortType] = useState('asc');
   
   const addToWishlist = (item) => {
     const target = wishListItems.find(wishlistItem => wishlistItem._id == item._id)
@@ -49,6 +49,26 @@ const removeFromWishlist = (id) => {
     })
   }, [])
   
+  const sortData = (type) => {
+    const sortedData = [...data];
+    sortedData.sort((a, b) => {
+      const priceA = a.price;
+      const priceB = b.price;
+      return type === 'asc' ? priceA - priceB : priceB - priceA;
+    });
+    setData(sortedData);
+    setSortType(type);
+  };
+
+  const sortByAsc = () => {
+    const sortedData = [...data].sort((a, b) => a.name.localeCompare(b.name));
+    setData(sortedData);
+  };
+
+  const sortByDesc = () => {
+    const sortedData = [...data].sort((a, b) => b.name.localeCompare(a.name));
+    setData(sortedData);
+  };
  
 
   const items = {
@@ -57,6 +77,8 @@ const removeFromWishlist = (id) => {
     error, setError,
     wishListItems, setWishlistItems,
     search,setSearch,
+  sortType, setSortType,
+  sortByDesc,sortByAsc ,sortData,
     addToWishlist, removeFromWishlist,
     searchItems
   }

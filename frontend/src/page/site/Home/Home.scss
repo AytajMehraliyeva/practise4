@@ -40,11 +40,28 @@
     }
     .input {
         display: flex;
-        width: 45%;
+        width: 70%;
         margin: auto;
         justify-content: space-between;
         gap: 20px;
         align-items: baseline;
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 100%;
+            color: white;
+            cursor: pointer;
+        }
+        .artan {
+            background-color: rgb(0, 140, 255);
+            width: 70px;
+        }
+        .sortAsc {
+            background-color: rgb(222, 0, 0);
+        }
+        .sortDesc {
+            background-color: rgb(0, 223, 0);
+        }
         input {
             width: 280px;
             border: 1px solid rgb(86, 86, 86);
