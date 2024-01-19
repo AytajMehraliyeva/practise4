@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import './Home.scss'
 import Card from '../../../component/Card/Card'
 const Home = () => {
-    const {sortData,sortType,sortByDesc,sortByAsc,search,setSearch,searchItems}=useContext(MainContext)
+    const {sortData,sortType,sortByDesc,sortByAsc,data}=useContext(MainContext)
 
   
 
@@ -19,12 +19,7 @@ const Home = () => {
 <div className='sectionSecond'> 
 <hr />
 <div className='input'>
-<input
-        type="text"
-        value={search}
-        placeholder='Search product'
-        onChange={(e) => setSearch(e.target.value)}
-      />
+
       <h4>Popular Courses</h4>
       <button className='artan' onClick={() => sortData(sortType === 'asc' ? 'desc' : 'asc')}>
         {sortType === 'asc' ? 'DESC' : 'ASC'}
@@ -34,7 +29,7 @@ const Home = () => {
 </div>
   <div className='crud'>
  
-   {searchItems.map((item,index)=>(
+   {data.map((item,index)=>(
     <Card item={item} index={index}/>
    ))}
   </div>

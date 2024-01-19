@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import MainContext from '../../../context';
 import './Add.scss'
 const Add = () => {
-    const {  setError, data, setData,} = useContext(MainContext)
+    const {  setError, data, setData,search,setSearch,searchItems} = useContext(MainContext)
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -94,7 +94,12 @@ const Add = () => {
                 <button className='formAdd_btn' type="submit">Submit</button>
                 <Toaster />
             </form>
-
+            <input
+        type="text"
+        value={search}
+        placeholder='Search product'
+        onChange={(e) => setSearch(e.target.value)}
+      />
             <table>
                 <thead>
                     <tr>
@@ -103,7 +108,7 @@ const Add = () => {
                         <th>Deleted</th></tr>
                 </thead>
                 <tbody>
-                    {data.map((item, index) => (
+                    {searchItems.map((item, index) => (
                         <tr key={index}>
                             <td>{item.name}</td>
                             <td>{item.price}</td>
