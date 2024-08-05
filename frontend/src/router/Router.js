@@ -19,7 +19,7 @@ const Router=[{
   }, 
   {
     path:"wishlist",
-    element:<Wish/>
+    element:<Wishlist/>
   },
   {
     path:":id",

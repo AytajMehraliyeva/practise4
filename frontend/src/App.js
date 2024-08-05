@@ -48,7 +48,7 @@ const decreaseCounter=(baskets)=>{
 
   if(target.count>1){
     target.count-=1
-    target.totalPrice=parseInt(target.count)*parseint(target.product.price)
+    target.totalPrice=parseInt(target.count)*parseInt(target.product.price)
     setBasket([...basket])
     localStorage.setItem('basket', JSON.stringify([...basket]))
   }else{
