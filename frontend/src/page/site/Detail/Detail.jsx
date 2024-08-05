@@ -7,7 +7,7 @@ const Detail = () => {
     const [item, setItem] = useState({})
     const { id } = useParams()
     useEffect(() => {
-        axios.get(`http://localhost:3030/cards/${id}`).then(res => {
+        axios.get(`https://practise4-back.onrender.com/cards/${id}`).then(res => {
             setItem(res.data)
         })
     }, [id])

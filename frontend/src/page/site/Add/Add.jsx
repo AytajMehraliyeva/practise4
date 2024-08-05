@@ -20,7 +20,7 @@ const Add = () => {
                 return
             }
 
-            await axios.post('http://localhost:3030/cards', values)
+            await axios.post('https://practise4-back.onrender.com/cards', values)
                 .then((res) => {
                     setData([...data, res.data])
                     toast.success("Product added!")
@@ -37,7 +37,7 @@ const Add = () => {
 
 
     const deleteHandle = (id) => {
-        axios.delete(`http://localhost:3030/cards/${id}`)
+        axios.delete(`https://practise4-back.onrender.com/cards/${id}`)
             .then(() => {
                 const deleteAdd = data.filter(product => product._id !== id)
                 setData(deleteAdd)
